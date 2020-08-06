@@ -1,38 +1,48 @@
 package pl.emilfrankiewicz.model;
 
+import java.util.Arrays;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties
 public class ResultWeather {
 
 	private String name;
-	private String temperature;
-
-	public ResultWeather() {
-	}
-
-	// not necessary
-	public ResultWeather(String name, String temperature) {
-		this.name = name;
-		this.temperature = temperature;
-	}
-
+	private Weather[] weather;
+	private Main main;
+	private Sys sys;
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getTemperature() {
-		return temperature;
+	public Weather[] getWeather() {
+		return weather;
 	}
-
-	public void setTemperature(String temperature) {
-		this.temperature = temperature;
+	public void setWeather(Weather[] weather) {
+		this.weather = weather;
 	}
-
+	public Main getMain() {
+		return main;
+	}
+	public void setMain(Main main) {
+		this.main = main;
+	}
+	public Sys getSys() {
+		return sys;
+	}
+	public void setSys(Sys sys) {
+		this.sys = sys;
+	}
 	@Override
 	public String toString() {
-		return "ResultWeather [name=" + name + ", temperature=" + temperature + "]";
+		return "ResultWeather [name=" + name + ", weather=" + Arrays.toString(weather) + ", main=" + main + ", sys="
+				+ sys + "]";
 	}
+	
 
+	
+	
 }
