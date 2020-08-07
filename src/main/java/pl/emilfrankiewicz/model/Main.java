@@ -1,10 +1,11 @@
 package pl.emilfrankiewicz.model;
 
+import pl.emilfrankiewicz.converters.TemperatureConverter;
+
 public class Main {
+
 	private String temp;
-
 	private String temp_min;
-
 	private String temp_max;
 
 	public String getTemp() {
@@ -33,7 +34,9 @@ public class Main {
 
 	@Override
 	public String toString() {
-		return "Main [temp=" + temp + ", temp_min=" + temp_min + ", temp_max=" + temp_max + "]";
+		return "Main [temp=" + TemperatureConverter.kelvinToCelsius(temp) + ", temp_min="
+				+ TemperatureConverter.kelvinToCelsius(temp_min) + ", temp_max="
+				+ TemperatureConverter.kelvinToCelsius(temp_max) + "]";
 	}
 
 }

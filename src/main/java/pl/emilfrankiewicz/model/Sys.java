@@ -35,8 +35,8 @@ public class Sys {
 
 	@Override
 	public String toString() {
-		return "Sys [country=" + country + ", sunrise=" + timeConverter.sunriseMillisecondToDate(sunrise) + ", sunset="
-				+ timeConverter.sunsetMillisecondToDate(sunset) + "]";
+		return "Sys [country=" + country + ", sunrise=" + timeConverter.sunriseFromMillisecondToTime(sunrise) + ", sunset="
+				+ timeConverter.sunsetFromMillisecondToTime(sunset) + "]";
 	}
 
 }
