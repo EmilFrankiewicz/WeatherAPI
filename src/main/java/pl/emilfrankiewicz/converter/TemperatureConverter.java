@@ -1,4 +1,4 @@
-package pl.emilfrankiewicz.converters;
+package pl.emilfrankiewicz.converter;
 
 public class TemperatureConverter {
 

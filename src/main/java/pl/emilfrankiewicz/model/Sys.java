@@ -1,6 +1,6 @@
 package pl.emilfrankiewicz.model;
 
-import pl.emilfrankiewicz.converters.TimeConverter;
+import pl.emilfrankiewicz.converter.TimeConverter;
 
 public class Sys {
 
@@ -18,7 +18,7 @@ public class Sys {
 	}
 
 	public String getSunrise() {
-		return sunrise;
+		return timeConverter.sunriseFromMillisecondToTime(sunrise);
 	}
 
 	public void setSunrise(String sunrise) {
@@ -26,7 +26,7 @@ public class Sys {
 	}
 
 	public String getSunset() {
-		return sunset;
+		return timeConverter.sunsetFromMillisecondToTime(sunset);
 	}
 
 	public void setSunset(String sunset) {
@@ -35,8 +35,7 @@ public class Sys {
 
 	@Override
 	public String toString() {
-		return "Sys [country=" + country + ", sunrise=" + timeConverter.sunriseFromMillisecondToTime(sunrise) + ", sunset="
-				+ timeConverter.sunsetFromMillisecondToTime(sunset) + "]";
+		return "Sys [country=" + country + ", sunrise=" + timeConverter.sunriseFromMillisecondToTime(sunrise)
+				+ ", sunset=" + timeConverter.sunsetFromMillisecondToTime(sunset) + "]";
 	}
-
 }

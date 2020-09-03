@@ -28,5 +28,4 @@ public class Weather {
 	public String toString() {
 		return "Weather [description=" + description + ", main=" + main + "]";
 	}
-
 }

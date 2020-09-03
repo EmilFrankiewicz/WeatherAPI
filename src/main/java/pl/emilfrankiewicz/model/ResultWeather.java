@@ -48,5 +48,4 @@ public class ResultWeather {
 		return "ResultWeather [name=" + name + ", weather=" + Arrays.toString(weather) + ", main=" + main + ", sys="
 				+ sys + "]";
 	}
-
 }

@@ -1,6 +1,6 @@
 package pl.emilfrankiewicz.model;
 
-import pl.emilfrankiewicz.converters.TemperatureConverter;
+import pl.emilfrankiewicz.converter.TemperatureConverter;
 
 public class Main {
 
@@ -9,7 +9,7 @@ public class Main {
 	private String temp_max;
 
 	public String getTemp() {
-		return temp;
+		return TemperatureConverter.kelvinToCelsius(temp);
 	}
 
 	public void setTemp(String temp) {
@@ -17,7 +17,7 @@ public class Main {
 	}
 
 	public String getTemp_min() {
-		return temp_min;
+		return TemperatureConverter.kelvinToCelsius(temp_min);
 	}
 
 	public void setTemp_min(String temp_min) {
@@ -25,7 +25,7 @@ public class Main {
 	}
 
 	public String getTemp_max() {
-		return temp_max;
+		return TemperatureConverter.kelvinToCelsius(temp_max);
 	}
 
 	public void setTemp_max(String temp_max) {
@@ -38,5 +38,4 @@ public class Main {
 				+ TemperatureConverter.kelvinToCelsius(temp_min) + ", temp_max="
 				+ TemperatureConverter.kelvinToCelsius(temp_max) + "]";
 	}
-
 }
